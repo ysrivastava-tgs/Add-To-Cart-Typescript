@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add To Cart System</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" 
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  
+  <style>
+    .bg{
+      background-image: url("https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 800px;
+    background-attachment: fixed;
+    }
+    /* .pmain{
+      color: white;
+      font: bolder;
+      
+    } */
+   
+  .navbar-height-nav{
+      height: 50px;
+    }
+    .footer-height{
+      height: 100px;
+    }
+    ul li a:hover{
+      border-bottom: 5px solid rgb(100, 100, 228);
+      
+    }
+    
+    .onhover{
+      cursor: pointer;
+    
+    }
+    @media only screen and (min-width: 300px) and (max-width: 991px){
+          .navbar-height-nav{
+            height: 260px;
+          }
+          .mymain{
+            height: auto;
+          }
+       
+       
+        .bg{
+      background-image: url("https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg");
+          width: 100%;
+          background-size: cover;
+      background-repeat: no-repeat;
+      max-width: 100%;
+      height: 600px;
+      padding: 100px;
+     background-attachment: fixed;
+     background-position: center center;
+    }
+        }
+        .wrapper{
+            max-width: 400px;
+            height: auto;
+            margin: auto;
+            border-radius: 25px;
+            background-color: rgba(223, 201, 201, 0.5);
+            color: rgb(20, 19, 20)
+        }
+       
+</style>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="index.html"><img src="https://media.istockphoto.com/vectors/business-team-planning-icon-vector-id895525816?k=6&m=895525816&s=170667a&w=0&h=HgQ5LbX2oLd-y8UvJ00WddfBe8zYzKFPiUUEX-mOYls=" alt="" height="50px" width="50px" class="rounded-circle"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<div class="collapse navbar-collapse navbar-height-nav inline" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto">
+              
+          <li  class="nav-item">
+            <a class="nav-link" href="./cart.html">Checkout<i class="fas fa-cart-plus"></i></a>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </nav>
+  <div class="bg">
+     <!-- <p style="width: 50%;" class="pmain">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+     </p> -->
+  </div>
+<section>
+  
+  <div class="container-fluid">
+    <h1>Our Accessories</h1>
+    <div class="row">
+      <div class="card col-md-3 m-2" style="width: auto;">
+        <img class="card-img-top imagie" src="https://www.techlicious.com/images/phones/parrot-zik-300px.jpg" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">Head Phone</h5>
+          <p class="card-text">&#8360;3,200</p>
+          <a  class="btn btn-primary" onclick="setCookie('rem-1','add-1','Head Phone+3200')" id="add-1">Add To Cart</a>
+          <a class="btn btn-primary" onclick="remCookie('rem-1','add-1','Head Phone+3200')" style="visibility: hidden;" id="rem-1">Remove From Cart</a>
+        
+        </div>
+      </div>
+      
+      <div class="card col-md-3 m-2" style="width: auto;">
+        <img class="card-img-top imagie" src="https://antesports.com/wp-content/uploads/2020/08/61hEYE0YQqL._SL1000_-300x300.jpg" alt="Card image cap" > 
+        <div class="card-body">
+          <h5 class="card-title">HP Keyboard</h5>
+          <p class="card-text">&#8360;1,600</p>
+          <a  class="btn btn-primary" onclick="setCookie('rem-2','add-2','HP Keyboard+1600')" id="add-2">Add To Cart</a>
+          <a class="btn btn-primary" onclick="remCookie('rem-2','add-2','HP Keyboard+1600')" style="visibility: hidden;" id="rem-2">Remove From Cart</a>
+        </div>
+        
+        
+    </div>
+    <div class="card col-md-3 m-2" style="width: auto;">
+      <img class="card-img-top imagie" src="https://themisfit.world/wp-content/uploads/2019/06/Adventure-Starts-Here-bike-sticker-300x300.jpg" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">Laptop Sticker</h5>
+        <p class="card-text">&#8360;3,200</p>
+        <a  class="btn btn-primary" onclick="setCookie('rem-3','add-3','Laptop Sticker+3200')" id="add-3">Add To Cart</a>
+        <a class="btn btn-primary" onclick="remCookie('rem-3','add-3','Laptop Sticker+3200')" style="visibility: hidden;" id="rem-3">Remove From Cart</a>
+      
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  
+  
+  
+</section>
+<script src="scripts.js" defer = "true"></script>
+
+<br>
+<br>
+
+<footer>
+  <footer class="bg-dark text-center text-lg-start footer-height">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(223, 201, 201, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="">Kite Technologies.com</a>
+      <address>
+        F-32 MIG Duplex Ayodhya Nagar Bangalore,568024
+      </address>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</footer>
+
+</body>
+</html>
